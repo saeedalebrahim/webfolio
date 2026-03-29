@@ -11,7 +11,10 @@ function App() {
         <p className="brand">Webfolio</p>
         <nav aria-label="Primary">
           <a href="#intro">Intro</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>

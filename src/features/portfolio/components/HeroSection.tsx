@@ -13,12 +13,15 @@ export function HeroSection({ profile }: HeroSectionProps) {
     <Section
       id="intro"
       eyebrow="Profile"
-      title={`${profile.fullName} - ${profile.role}`}
+      title={`${profile.fullName} | ${profile.role}`}
       subtitle={`${profile.intro} Based in ${profile.location}.`}
     >
       <div className="hero-meta">
         <p>
           Experience: <strong>{formatYearRange(profile.experienceStartYear)}</strong>
+        </p>
+        <p>
+          Availability: <strong>{profile.availability}</strong>
         </p>
         <p>
           Focus: <strong>{toSentenceList(profile.skills.slice(0, 3))}</strong>

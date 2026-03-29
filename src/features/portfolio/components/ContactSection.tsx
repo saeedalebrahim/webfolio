@@ -10,8 +10,8 @@ export function ContactSection({ links }: ContactSectionProps) {
     <Section
       id="contact"
       eyebrow="Contact"
-      title="Open to product and platform roles"
-      subtitle="If your team values accessibility, performance, and clear engineering practices, let us connect."
+      title="Open to Senior Flutter opportunities"
+      subtitle="Based in Turin and available for EU remote roles. Reach out for mobile, backend, or full product delivery collaboration."
     >
       <ul className="contact-list" aria-label="Contact links">
         {links.map((link) => (

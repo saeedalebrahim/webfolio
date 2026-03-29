@@ -1,4 +1,7 @@
 export { HeroSection } from './components/HeroSection'
+export { ExperienceSection } from './components/ExperienceSection'
+export { SkillsSection } from './components/SkillsSection'
 export { ProjectsSection } from './components/ProjectsSection'
+export { EducationSection } from './components/EducationSection'
 export { ContactSection } from './components/ContactSection'
 export { usePortfolioData } from './hooks/usePortfolioData'

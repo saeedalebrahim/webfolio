@@ -8,17 +8,47 @@ export type PortfolioProject = {
   link: ExternalLink
 }
 
+export type PortfolioExperience = {
+  id: string
+  role: string
+  company: string
+  location: string
+  period: string
+  highlights: string[]
+}
+
+export type PortfolioSkillGroup = {
+  category: string
+  items: string[]
+}
+
+export type PortfolioEducation = {
+  degree: string
+  institution: string
+  status: string
+}
+
+export type PortfolioLanguage = {
+  name: string
+  level: string
+}
+
 export type PortfolioProfile = {
   fullName: string
   role: string
   intro: string
   experienceStartYear: number
   location: string
+  availability: string
   skills: string[]
 }
 
 export type PortfolioData = {
   profile: PortfolioProfile
+  experience: PortfolioExperience[]
+  skillGroups: PortfolioSkillGroup[]
+  education: PortfolioEducation
+  languages: PortfolioLanguage[]
   projects: PortfolioProject[]
   links: ExternalLink[]
 }

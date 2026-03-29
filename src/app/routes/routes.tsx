@@ -1,4 +1,12 @@
-import { ContactSection, HeroSection, ProjectsSection, usePortfolioData } from '../../features/portfolio'
+import {
+	ContactSection,
+	EducationSection,
+	ExperienceSection,
+	HeroSection,
+	ProjectsSection,
+	SkillsSection,
+	usePortfolioData,
+} from '../../features/portfolio'
 import { Section } from '../../shared/ui/Section/Section'
 
 export function AppRoutes() {
@@ -28,7 +36,10 @@ export function AppRoutes() {
 	return (
 		<>
 			<HeroSection profile={data.profile} />
+			<ExperienceSection experience={data.experience} />
+			<SkillsSection skillGroups={data.skillGroups} />
 			<ProjectsSection projects={data.projects} />
+			<EducationSection education={data.education} languages={data.languages} />
 			<ContactSection links={data.links} />
 		</>
 	)

@@ -2,44 +2,116 @@ import type { PortfolioData } from '../types'
 
 const portfolioData: PortfolioData = {
   profile: {
-    fullName: 'Alex Carter',
-    role: 'Frontend Engineer',
+    fullName: 'Saeed Alebrahim',
+    role: 'Senior Flutter Developer',
     intro:
-      'I design and build fast, accessible interfaces with a focus on product clarity, measurable performance, and maintainable systems.',
+      'Senior Flutter Developer with 5 years of production experience, published apps with 10,000+ downloads, and a clean architecture mindset across Flutter and .NET backends.',
     experienceStartYear: 2021,
-    location: 'Remote, UTC+8',
-    skills: ['React', 'TypeScript', 'Vite', 'Accessibility', 'Design Systems'],
+    location: 'Turin, Italy',
+    availability: 'EU resident, available for remote roles in the EU.',
+    skills: ['Flutter/Dart', 'BLoC', 'Riverpod', '.NET Core', 'REST APIs', 'Firebase'],
   },
+  experience: [
+    {
+      id: 'goljaam',
+      role: 'Senior Flutter Developer & Founder',
+      company: 'GOLJAAM',
+      location: 'Remote',
+      period: 'August 2021 - Present',
+      highlights: [
+        'Published apps with 10K+ downloads, Google Play Billing integration, and gamification features.',
+        'Architected Flutter apps with clean architecture, BLoC pattern, and offline-first capabilities.',
+        'Built .NET Core backends with REST APIs and real-time data synchronization.',
+        'Led development team delivery and established CI/CD pipelines.',
+      ],
+    },
+    {
+      id: 'flutter-freelance',
+      role: 'Flutter Developer',
+      company: 'Freelancer',
+      location: 'Remote',
+      period: 'January 2021 - August 2021',
+      highlights: [
+        'Built custom Flutter apps for international clients.',
+        'Integrated payment systems, Firebase services, and third-party APIs.',
+      ],
+    },
+    {
+      id: 'fullstack-freelance',
+      role: 'Full-Stack Developer',
+      company: 'Freelancer',
+      location: 'Remote',
+      period: 'January 2019 - December 2020',
+      highlights: [
+        'Developed web applications with JavaScript and .NET Core.',
+        'Created RESTful APIs with ASP.NET Core MVC.',
+      ],
+    },
+    {
+      id: 'ux-freelance',
+      role: 'UI/UX Designer',
+      company: 'Freelancer',
+      location: 'Remote',
+      period: 'October 2019 - October 2021',
+      highlights: [
+        'Designed mobile and web interfaces with Figma and Adobe XD.',
+      ],
+    },
+  ],
+  skillGroups: [
+    {
+      category: 'Mobile',
+      items: [
+        'Flutter/Dart (5 years)',
+        'BLoC',
+        'Riverpod',
+        'Provider',
+        'Google Play Billing',
+        'Firebase',
+        'SQLite',
+        'Hive',
+        'Dio',
+      ],
+    },
+    {
+      category: 'Backend',
+      items: ['.NET Core', 'ASP.NET MVC', 'REST APIs'],
+    },
+    {
+      category: 'Web',
+      items: ['JavaScript', 'TypeScript'],
+    },
+    {
+      category: 'Tools',
+      items: ['Git', 'CI/CD', 'Figma', 'Agile/Scrum'],
+    },
+  ],
+  education: {
+    degree: 'Bachelor of Computer Engineering',
+    institution: 'Polytechnic of Turin',
+    status: 'In Progress',
+  },
+  languages: [
+    { name: 'English', level: 'C1' },
+    { name: 'Persian', level: 'Native' },
+  ],
   projects: [
     {
-      id: 'atlas-ui',
-      name: 'Atlas UI Kit',
+      id: 'bilgimizde-app',
+      name: 'Bilgimizde (Google Play)',
       summary:
-        'Component library and docs portal with tokens, visual regression checks, and release automation for three product teams.',
-      tech: ['React', 'Storybook', 'TypeScript'],
-      link: { label: 'View case study', href: '#' },
-    },
-    {
-      id: 'pulse-analytics',
-      name: 'Pulse Analytics',
-      summary:
-        'Dashboard for campaign monitoring with custom charts, keyboard-first filters, and caching to keep interactions responsive.',
-      tech: ['React', 'D3', 'TanStack Query'],
-      link: { label: 'Read project notes', href: '#' },
-    },
-    {
-      id: 'quiet-forms',
-      name: 'Quiet Forms',
-      summary:
-        'Conversion-focused form platform using schema-driven validation and runtime analytics to improve completion rate.',
-      tech: ['React Hook Form', 'Zod', 'Node API'],
-      link: { label: 'See live preview', href: '#' },
+        'Example published app from production portfolio, featuring mobile-first UX and release discipline.',
+      tech: ['Flutter', 'Google Play Billing', 'Firebase', 'Gamification'],
+      link: {
+        label: 'View on Play Store',
+        href: 'https://play.google.com/store/apps/details?id=com.bilgimizde.bilgimizde_app',
+      },
     },
   ],
   links: [
-    { label: 'GitHub', href: 'https://github.com' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com' },
-    { label: 'Email', href: 'mailto:hello@example.dev' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/saeedalebrahim' },
+    { label: 'GitHub', href: 'https://github.com/saeedalebrahim' },
+    { label: 'Email', href: 'mailto:saeedalebrahiim@gmail.com' },
   ],
 }
 

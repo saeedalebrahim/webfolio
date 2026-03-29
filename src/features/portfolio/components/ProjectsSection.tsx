@@ -10,9 +10,9 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
     <Section
       id="projects"
-      eyebrow="Selected Work"
-      title="Projects that shipped"
-      subtitle="Each project highlights cross-functional collaboration, measurable outcomes, and maintainable frontend architecture."
+      eyebrow="Portfolio"
+      title="Published app showcase"
+      subtitle="A real production app example with public distribution and commercial feature integrations."
     >
       <ul className="project-grid" aria-label="Project list">
         {projects.map((project) => (
