@@ -1,0 +1,21 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  padding: 0.28rem 0.58rem;
+  border: 1px solid var(--line);
+}
+
+.tag-neutral {
+  color: var(--text-soft);
+  background: color-mix(in oklab, var(--surface-2), var(--surface) 35%);
+}
+
+.tag-accent {
+  color: color-mix(in oklab, var(--brand), black 14%);
+  background: color-mix(in oklab, var(--brand-2), white 65%);
+  border-color: color-mix(in oklab, var(--brand), white 55%);
+}

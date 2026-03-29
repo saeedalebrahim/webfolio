@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text);
+  background:
+    radial-gradient(circle at 8% 7%, rgba(243, 155, 51, 0.24), transparent 30%),
+    radial-gradient(circle at 92% 14%, rgba(202, 78, 29, 0.2), transparent 28%),
+    linear-gradient(180deg, var(--bg) 0%, color-mix(in oklab, var(--bg), #ffffff 6%) 100%);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

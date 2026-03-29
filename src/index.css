@@ -1,0 +1,6 @@
+@import './shared/styles/tokens.css';
+@import './shared/styles/globals.css';
+
+#root {
+  min-height: 100vh;
+}
