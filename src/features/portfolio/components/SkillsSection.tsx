@@ -1,5 +1,5 @@
 import { Section } from '../../../shared/ui/Section/Section'
-import { Tag } from '../../../shared/ui/Tag/Tag'
+import { PortfolioCard, PortfolioTagList } from './PortfolioPrimitives'
 import type { PortfolioSkillGroup } from '../types'
 
 type SkillsSectionProps = {
@@ -17,12 +17,10 @@ export function SkillsSection({ skillGroups }: SkillsSectionProps) {
       <ul className="skill-groups" aria-label="Technical skills by category">
         {skillGroups.map((group) => (
           <li key={group.category} className="skill-group-card">
-            <h3>{group.category}</h3>
-            <div className="tag-list" aria-label={`${group.category} skills`}>
-              {group.items.map((item) => (
-                <Tag key={item}>{item}</Tag>
-              ))}
-            </div>
+            <PortfolioCard>
+              <h3>{group.category}</h3>
+              <PortfolioTagList items={group.items} ariaLabel={`${group.category} skills`} />
+            </PortfolioCard>
           </li>
         ))}
       </ul>

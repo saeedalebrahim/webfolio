@@ -1,5 +1,5 @@
 import { Section } from '../../../shared/ui/Section/Section'
-import { Tag } from '../../../shared/ui/Tag/Tag'
+import { PortfolioCard, PortfolioTagList } from './PortfolioPrimitives'
 import type { PortfolioEducation, PortfolioLanguage } from '../types'
 
 type EducationSectionProps = {
@@ -8,6 +8,8 @@ type EducationSectionProps = {
 }
 
 export function EducationSection({ education, languages }: EducationSectionProps) {
+  const languageLabels = languages.map((language) => `${language.name} (${language.level})`)
+
   return (
     <Section
       id="education"
@@ -15,22 +17,16 @@ export function EducationSection({ education, languages }: EducationSectionProps
       title="Academic track and communication"
       subtitle="Current degree progress and language proficiency for international teams."
     >
-      <div className="education-card">
+      <PortfolioCard className="education-card">
         <h3>{education.degree}</h3>
         <p>{education.institution}</p>
         <p>Status: {education.status}</p>
-      </div>
+      </PortfolioCard>
 
-      <div className="language-block" aria-label="Languages">
+      <PortfolioCard className="language-block">
         <h3>Languages</h3>
-        <div className="tag-list">
-          {languages.map((language) => (
-            <Tag key={language.name} tone="accent">
-              {language.name} ({language.level})
-            </Tag>
-          ))}
-        </div>
-      </div>
+        <PortfolioTagList items={languageLabels} ariaLabel="Language proficiency" tone="accent" />
+      </PortfolioCard>
     </Section>
   )
 }

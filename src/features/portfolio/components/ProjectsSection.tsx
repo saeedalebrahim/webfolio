@@ -1,5 +1,5 @@
 import { Section } from '../../../shared/ui/Section/Section'
-import { Tag } from '../../../shared/ui/Tag/Tag'
+import { PortfolioCard, PortfolioTagList } from './PortfolioPrimitives'
 import type { PortfolioProject } from '../types'
 
 type ProjectsSectionProps = {
@@ -17,16 +17,14 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
       <ul className="project-grid" aria-label="Project list">
         {projects.map((project) => (
           <li key={project.id} className="project-card">
-            <h3>{project.name}</h3>
-            <p>{project.summary}</p>
-            <div className="tag-list" aria-label={`${project.name} technologies`}>
-              {project.tech.map((tech) => (
-                <Tag key={tech}>{tech}</Tag>
-              ))}
-            </div>
-            <a href={project.link.href} className="project-link" target="_blank" rel="noreferrer">
-              {project.link.label}
-            </a>
+            <PortfolioCard>
+              <h3>{project.name}</h3>
+              <p>{project.summary}</p>
+              <PortfolioTagList items={project.tech} ariaLabel={`${project.name} technologies`} />
+              <a href={project.link.href} className="project-link" target="_blank" rel="noreferrer">
+                {project.link.label}
+              </a>
+            </PortfolioCard>
           </li>
         ))}
       </ul>

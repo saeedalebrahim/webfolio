@@ -1,4 +1,5 @@
 import { Section } from '../../../shared/ui/Section/Section'
+import { PortfolioCard } from './PortfolioPrimitives'
 import type { PortfolioExperience } from '../types'
 
 type ExperienceSectionProps = {
@@ -16,18 +17,20 @@ export function ExperienceSection({ experience }: ExperienceSectionProps) {
       <ul className="timeline" aria-label="Work experience timeline">
         {experience.map((item) => (
           <li key={item.id} className="timeline-item">
-            <div className="timeline-head">
-              <h3>{item.role}</h3>
-              <p>
-                {item.company} | {item.location}
-              </p>
-              <p>{item.period}</p>
-            </div>
-            <ul className="timeline-highlights" aria-label={`${item.role} highlights`}>
-              {item.highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
+            <PortfolioCard>
+              <div className="timeline-head">
+                <h3>{item.role}</h3>
+                <p>
+                  {item.company} | {item.location}
+                </p>
+                <p>{item.period}</p>
+              </div>
+              <ul className="timeline-highlights" aria-label={`${item.role} highlights`}>
+                {item.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+            </PortfolioCard>
           </li>
         ))}
       </ul>
