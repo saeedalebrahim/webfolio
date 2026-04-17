@@ -4,6 +4,10 @@ export type PortfolioProject = {
   id: string
   name: string
   summary: string
+  description?: string
+  features?: string[]
+  capabilities?: string[]
+  images?: string[]
   tech: string[]
   link: ExternalLink
 }
